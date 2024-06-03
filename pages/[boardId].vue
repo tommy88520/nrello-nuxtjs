@@ -44,10 +44,10 @@ const lists = computed(() => data.value?.lists as ListDocument[]);
     </template>
 
     <h1 class="tex-3xl font-semibold mb-4 inline-block">
-      {{ data!.name }}
+      {{ data.name }}
     </h1>
 
-    <ListContainer :lists="lists" :board-id="(boardId as string)" />
+    <ListContainer :lists="lists" :board-id="boardId" />
 
     <USlideover v-model="showCreateList">
       <SlideoverHeader
@@ -57,7 +57,7 @@ const lists = computed(() => data.value?.lists as ListDocument[]);
 
       <FormList
         type="create"
-        :board-id="(boardId as string)"
+        :board-id="boardId"
         :on-create="
           () => {
             refresh();

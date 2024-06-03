@@ -69,14 +69,14 @@ watchEffect(() => {
 
     <!-- List of boards -->
     <section class="grid grid-cols-2 lg:grid-cols-5 my-4 gap-4">
-      <!-- <BoardCard
+      <BoardCard
         v-for="board in data"
         :key="board._id"
         :board="board"
         :on-edit="handleEdit"
-      ></BoardCard> -->
+      ></BoardCard>
 
-      <div
+      <!-- <div
         v-for="board in data"
         :key="board._id"
         class="bg-white dark:bg-gray-800 rounded-lg border shadow p-2 text-center"
@@ -88,7 +88,7 @@ watchEffect(() => {
         "
       >
         {{ board.name }}
-      </div>
+      </div> -->
     </section>
     <!-- ./ List of boards -->
   </WrapperDefault>
