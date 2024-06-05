@@ -10,7 +10,6 @@ defineProps<{
 const { data } = await useFetch<any>(
   `https://pixabay.com/api/?key=${pixabayApiKey}&image_type=photo&orientation=horizontal&per_page=32`
 );
-console.log(data, 111);
 
 defineEmits<{
   (e: "update:modelValue", value: string): void;

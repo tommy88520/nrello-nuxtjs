@@ -11,13 +11,13 @@ export default defineEventHandler(async (event) => {
 
   const boardCount = await Board.countDocuments({ owner: user._id });
 
-  if (boardCount >= 1 && !user.hasActiveSubscription) {
-    throw createError({
-      statusCode: 403,
-      message:
-        "You can't create more than 1 boards in free plan. Please upgrade your plan to create unlimited",
-    });
-  }
+  // if (boardCount >= 1 && !user.hasActiveSubscription) {
+  //   throw createError({
+  //     statusCode: 403,
+  //     message:
+  //       "You can't create more than 1 boards in free plan. Please upgrade your plan to create unlimited",
+  //   });
+  // }
 
   const board = await Board.create({
     ...body,

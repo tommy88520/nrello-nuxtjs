@@ -39,6 +39,11 @@ async function handleSubmit(
       return;
     }
 
+    if (!event.data.coverImage) {
+      event.data.coverImage =
+        "https://cdn.pixabay.com/photo/2018/02/08/10/22/desk-3139127_150.jpg";
+    }
+
     const { data, error } = await useFetch("/api/boards", {
       method: "POST",
       body: event.data,
